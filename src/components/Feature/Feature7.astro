@@ -1,0 +1,57 @@
+---
+/**
+ * * These are larger cards with images, titles, and text
+ * Recommend using 3 cards in a row
+ */
+
+// components
+import FeatureCard from "@components/FeatureCard/FeatureCardImage.astro";
+
+// images
+import cardImage1 from "@images/card-img-1.jpg";
+import cardImage2 from "@images/card-img-2.jpg";
+import cardImage3 from "@images/card-img-3.jpg";
+import race1 from "@races/carrera_vo2max.png";
+import race2 from "@races/maraton_cana.jpg";
+import race3 from "@races/andes_trail.jpg";
+interface FeatureData {
+  image: ImageMetadata;
+  title: string;
+  text: string;
+}
+
+// data
+const featureData: FeatureData[] = [
+  {
+    image: race1,
+    title: "Carrera Navideña 10K Team VO2MAX 2024",
+    text: `Ibagué Noviembre 30`,
+  },
+  {
+    image: race2,
+    title: "Media Maratón de la Caña 2024",
+    text: `Palmira Valle del Cauca Noviembre 24`,
+  },
+  {
+    image: race3,
+    title: "Los Andes Trail 2024",
+    text: `Andes Noviembre 7`,
+  }
+];
+---
+
+<section id="feature2" class="my-6 md:my-24">
+  <div class="site-container">
+    <div class="grid gap-4 sm:grid-cols-2 md:grid-cols-4">
+      {
+        featureData.map((feature) => (
+          <FeatureCard
+            title={feature.title}
+            text={feature.text}
+            image={feature.image}
+          />
+        ))
+      }
+    </div>
+  </div>
+</section>

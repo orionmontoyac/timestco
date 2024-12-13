@@ -1,0 +1,52 @@
+---
+import { Icon } from "astro-icon/components";
+
+// components
+
+
+// utils
+import { getLocaleFromUrl } from "@js/localeUtils";
+import { useTranslations } from "@js/translationUtils";
+
+const currLocale = getLocaleFromUrl(Astro.url);
+const t = useTranslations(currLocale);
+---
+
+<section
+    id="hero2"
+    class="relative flex w-full overflow-hidden pb-28 pt-32 md:pb-36 md:pt-40"
+>
+    <!-- background glow -->
+    <div
+        class="absolute inset-x-0 bottom-0 -z-10 mx-auto aspect-square w-[85%] max-w-5xl translate-x-1/4 translate-y-3/4 rounded-full bg-primary-400/40 blur-3xl"
+        aria-hidden="true"
+    >
+    </div>
+
+    <div
+        class="absolute bottom-0 right-0 -z-10 mx-auto aspect-square w-[85%] max-w-5xl translate-x-1/4 translate-y-1/2 rounded-full bg-primary-600/30 blur-3xl"
+        aria-hidden="true"
+    >
+    </div>
+    <!-- hero items -->
+
+    <div class="site-container mx-auto max-w-4xl gap-8 text-center">
+        <!-- Hero text -->
+        <h1
+            class="bg-gradient-to-r from-base-900 to-base-600/90 bg-clip-text pb-4 text-5xl font-medium text-transparent md:text-6xl dark:from-base-100 dark:to-base-400/90"
+            data-aos="fade-up"
+        >
+            ¡Encuentra aqui tus resultados!
+        </h1>
+        <p
+            class="description mx-auto mt-2 max-w-sm sm:max-w-md md:max-w-lg"
+            data-aos="fade-up"
+            data-aos-delay="0.2"
+            data-aos-trigger="#hero2"
+        >
+            Porque sabemos que tus tiempos son el resultado de todo tu esfuerzo
+            y entrenamiento, en ésta sección puedes consultar los resultados de
+            tus competencias.
+        </p>
+    </div>
+</section>

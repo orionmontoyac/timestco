@@ -1,0 +1,101 @@
+---
+/**
+ * * These are medium cards with an icon, large colored text (title), and smaller description (text)
+ * 3 or 4 cards in a row is ideal
+ *
+ * ! If you can an error for an icon like "Error: Not Found: "calendar-check" in pack "tabler",
+ * ! You can copy to actual SVG into src/icons and name it however and use similar to below
+ */
+
+// components
+import FeatureCard from "@components/FeatureCard/FeatureCardColorText.astro";
+
+interface FeatureCardData {
+    icon: string;
+    title: string;
+    text: string;
+}
+
+// data
+// NOTE: You still need to manually update the label, title, and details that come before the cards
+// those are later down in this component
+const featureData: FeatureCardData[] = [
+    {
+        icon: "tabler/person-run",
+        title: "10.000+",
+        text: `Atletas`,
+    },
+    {
+        icon: "tabler/cloud",
+        title: "100+",
+        text: `Eventos Atletismo`,
+    },
+    {
+        icon: "tabler/user",
+        title: "25+",
+        text: `Eventos Ciclismo`,
+    },
+    {
+        icon: "tabler/brand-twitter",
+        title: "5+",
+        text: `Años de Experiencia`,
+    },
+];
+---
+
+<section id="feature5" class="my-24 md:my-36">
+    <div class="site-container">
+        <div class=" max-w-3xl">
+            <div class="flex">
+                <p
+                    class="colored-title"
+                    data-aos="fade-up"
+                    data-aos-trigger="#feature5"
+                >
+                    Eventos que han confiado en nosotros
+                </p>
+            </div>
+            <h2
+                class="h2 mt-6"
+                data-aos="fade-up"
+                data-aos-delay=".1"
+                data-aos-trigger="#feature5"
+            >
+                Hemos ayudado a cientos de eventos a tener éxito en todo
+                Colombia
+            </h2>
+            <p
+                class="mt-4 text-base-700 dark:text-base-300"
+                data-aos="fade-up"
+                data-aos-delay=".2"
+                data-aos-trigger="#feature5"
+            >
+                Nuestra plataforma líder ha sido elegida por organizadores de
+                eventos deportivos de alto impacto en Colombia, abarcando una
+                diversidad de disciplinas de renombre. Desde emocionantes trail
+                running por senderos andinos, competiciones de mountain bike (MTB)
+                con paisajes desafiantes, hasta competencias de ciclismo de
+                primer nivel, hemos sido el aliado tecnológico que impulsa el
+                éxito de cada evento.
+            </p>
+        </div>
+
+        <div
+            id="feature5cards"
+            class="mt-8 grid gap-6 xs:grid-cols-2 md:mt-16 md:grid-cols-4"
+        >
+            {
+                featureData.map((feature, idx) => (
+                    <FeatureCard
+                        title={feature.title}
+                        text={feature.text}
+                        icon={feature.icon}
+                        data-aos="fade-up"
+                        data-aos-delay={`${idx * 0.25 + 0.2}`}
+                        data-aos-trigger="#feature5cards"
+                    />
+                ))
+            }
+        </div>
+    </div>
+</section>

@@ -1,0 +1,99 @@
+---
+/**
+ * * These are alternating side cards with titles, text, and images
+ * Recommend using 2 or 3 cards in a row
+ */
+
+// components
+import FeatureCard from "@components/FeatureCard/FeatureCardSideImage.astro";
+
+// images
+import image1 from "@images/ex_1.png";
+import image2 from "@images/ex_2.png";
+import image3 from "@images/ex_3.png";
+
+interface FeatureItem {
+    image: ImageMetadata; // an imported image
+    label: string; // colored text first
+    title: string; // larger title second
+    details: string; // text details third
+}
+
+// data
+const featureData: FeatureItem[] = [
+    {
+        image: image1,
+        label: "Experiencia y Trayectoria",
+        title: " Hemos estado en el mercado por muchos años, respaldando la excelencia en eventos deportivos de todas las disciplinas.",
+        details: `Eventos de cualquier alcance y dimensión: Desde pequeñas competencias locales, hasta eventos masivos de renombre, siempre brindando nuestros servicios con la misma dedicación y profesionalismo.`,
+    },
+    {
+        image: image2,
+        label: "Beneficios para Organizadores",
+        title: "",
+        details: `<ul class="list-disc pl-5 space-y-4">
+                <li class="flex items-start">
+                    <span class="mr-3 text-lg">💼</span> 
+                    <p class="">
+                    <strong>Asesoría Profesional:</strong> Nuestro equipo de expertos está siempre disponible para brindarte asesoría y apoyo en la planificación y ejecución de tu evento.
+                    </p>
+                </li>
+                <li class="flex items-start">
+                    <span class="mr-3 text-lg">🎨</span>
+                    <p class="">
+                    <strong>Personalización Total:</strong> Sabemos lo importante que es la identidad de tu evento. Por eso puedes diseñar desde la placa o dorsal hasta el certificado de participación de los finishers. ¡Cada detalle reflejará la esencia de tu carrera!
+                    </p>
+                </li>
+                <li class="flex items-start">
+                    <span class="mr-3 text-lg">📣</span>
+                    <p class="">
+                    <strong>Promoción en Redes:</strong> A través de nuestras redes sociales y plataformas, promocionamos tu evento para aumentar la participación y visibilidad.
+                    </p>
+                </li>
+                </ul>`,
+    },
+    {
+        image: image3,
+        label: "Beneficios para Participantes",
+        title: "",
+        details: `<ul class="list-disc pl-5 space-y-4">
+        <li class="flex items-start">
+        <span class="mr-3 text-lg">📜</span> 
+        <p class="">
+        <strong>Certificados Personalizados:</strong> Cada finisher tendrá un certificado de participación personalizado, que podrán descargar fácilmente desde nuestra plataforma.
+        </p>
+        </li>
+        <li class="flex items-start">
+         <span class="mr-3 text-lg">📸</span> 
+        <p class="">
+        <strong>Galería de Fotos o Video:</strong> Capturamos algunos de los mejores momentos de la competencia y los compartimos en nuestras redes sociales para que los participantes revivan la emoción de su logro.
+        </p>
+        </li>
+        <li class="flex items-start">
+         <span class="mr-3 text-lg">🔎</span> 
+        <p class="">
+        Búsqueda precisa en las tablas de resultados por tiempo, dorsal, placa, nombre, distancia, etc.
+        </p>
+        </li>
+       </ul>`,
+    },
+];
+---
+
+<section id="feature4" class="my-24 overflow-clip md:my-36">
+    <div class="site-container">
+        <div class="flex flex-col gap-16 md:gap-24">
+            {
+                featureData.map((feature, idx) => (
+                    <FeatureCard
+                        label={feature.label}
+                        title={feature.title}
+                        details={feature.details}
+                        image={feature.image}
+                        imageSide={idx % 2 === 0 ? "right" : "left"}
+                    />
+                ))
+            }
+        </div>
+    </div>
+</section>
