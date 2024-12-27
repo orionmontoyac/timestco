@@ -1,12 +1,9 @@
 ---
-import Layout from "../layouts/Layout.astro";
+import Layout from "@layouts/Layout.astro";
 import Hero2 from "@components/Hero2.astro";
 import Feature7 from "@components/Feature/Feature7.astro";
-import LogoCloud2 from "@components/LogoCloud.astro";
-import Benefits from "@components/Benefits.astro";
-import Testimonials1 from "@components/Testimonials/Testimonials1.astro";
-import UserConfidence from "@components/UserConfidence.astro";
-
+import FeatureCard from "@components/FeatureCard/FeatureCardImage.astro";
+import race1 from "@races/carrera_vo2max.png";
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 // utils
@@ -16,6 +13,9 @@ import { getTranslatedData } from "@js/translationUtils";
 // data
 const currLocale = getLocaleFromUrl(Astro.url);
 const siteData = getTranslatedData("siteData", currLocale);
+
+import { getCollection } from "astro:content";
+const races = await getCollection("races");
 ---
 
 <Layout title={siteData.title} description={siteData.description}>

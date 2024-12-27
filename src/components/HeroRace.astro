@@ -2,7 +2,7 @@
 import { Icon } from "astro-icon/components";
 
 // components
-
+import Pricing2 from "@components/Pricing2.astro";
 
 // utils
 import { getLocaleFromUrl } from "@js/localeUtils";
@@ -14,11 +14,16 @@ const t = useTranslations(currLocale);
 
 <section
     id="hero2"
-    class="relative flex w-full overflow-hidden pb-28 pt-12 md:pb-36 md:pt-40"
+    class="relative flex w-full overflow-hidden pb-12 pt-32 md:pb-26 md:pt-40 sm:pt-32"
 >
     <!-- background glow -->
     <div
         class="absolute inset-x-0 bottom-0 -z-10 mx-auto aspect-square w-[85%] max-w-sm translate-x-1/4 translate-y-3/4 rounded-full bg-primary-400/40 blur-3xl"
+        aria-hidden="true"
+    >
+    </div>
+    <div
+        class="absolute inset-0 -z-20 bg-[url('src/assets/races/andes_trail.jpg')] bg-cover bg-repeat"
         aria-hidden="true"
     >
     </div>
@@ -30,23 +35,20 @@ const t = useTranslations(currLocale);
     </div>
     <!-- hero items -->
 
-    <div class="site-container mx-auto max-w-4xl gap-8 text-center">
-        <!-- Hero text -->
+    <div class="mx-auto max-w-4xl gap-8 text-center">
         <h1
             class="bg-gradient-to-r from-base-900 to-base-600/90 bg-clip-text pb-4 text-5xl font-medium text-transparent md:text-6xl dark:from-base-100 dark:to-base-400/90"
             data-aos="fade-up"
         >
-            ¡Encuentra aqui tus resultados!
+            Los Andes Trail
         </h1>
-        <p
-            class="description mx-auto mt-2 max-w-sm sm:max-w-md md:max-w-lg"
-            data-aos="fade-up"
-            data-aos-delay="0.2"
-            data-aos-trigger="#hero2"
-        >
-            Porque sabemos que tus tiempos son el resultado de todo tu esfuerzo
-            y entrenamiento, en ésta sección puedes consultar los resultados de
-            tus competencias.
-        </p>
+        <div class="flex items-center justify-center" data-aos="fade-up" >
+            <Icon name="tabler/map-pin" class="h-5 w-5"/>
+            <span class="ml-2">Andes, Antioquia, Colombia.</span>
+        </div>
+        <div class="flex items-center justify-center" data-aos="fade-up" >
+            <Icon name="tabler/calendar-dots" class="h-5 w-5" />
+            <span class="ml-2">2024-11-07</span>
+        </div>
     </div>
 </section>

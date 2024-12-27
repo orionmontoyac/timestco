@@ -1,0 +1,352 @@
+---
+import { Icon } from "astro-icon/components";
+---
+
+<section>
+    <div class="site-container pt-4">
+        <div class="sm:hidden">
+            <label for="tabs" class="sr-only">Select your country</label>
+            <select
+                id="tabs"
+                class="dark:bg-primary-800 border border-gray-300 text-gray-900 text-md rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+            >
+                <option>5K</option>
+                <option>10K</option>
+                <option>22K</option>
+            </select>
+        </div>
+        <ul
+            class="hidden text-md font-medium text-center text-gray-500 rounded-lg shadow sm:flex"
+        >
+            <li
+                class="w-full focus-within:z-10 border border-base-300 hover:cursor-pointer overflow-hidden relative"
+            >
+                <button class="w-full">
+                    <span
+                        class="main-text-gradient inline-block text-5xl w-full p-4 font-bold"
+                        aria-current="page">5K</span
+                    >
+                </button>
+
+                <div
+                    class="absolute text-primary-800 dark:text-primary-200 opacity-50"
+                >
+                    <Icon name="tabler/person-run" class="h-28 w-32" />
+                </div>
+            </li>
+            <li
+                class="w-full focus-within:z-10 border border-base-300 overflow-hidden relative"
+            >
+                <button class="w-full">
+                    <span
+                        class="inline-block main-text-gradient text-5xl w-full p-4 font-bold hover:cursor-pointer"
+                        >10K</span
+                    >
+                </button>
+
+                <div
+                    class="absolute text-primary-800 dark:text-primary-200 opacity-50"
+                >
+                    <Icon name="tabler/person-run" class="h-28 w-32" />
+                </div>
+            </li>
+            <li
+                class="w-full focus-within:z-10 border border-base-300 overflow-hidden relative"
+            >
+                <button class="w-full">
+                    <span
+                        class="inline-block main-text-gradient text-5xl w-full p-4 font-bold hover:cursor-pointer"
+                        >22K</span
+                    >
+                </button>
+
+                <div
+                    class="absolute text-primary-800 dark:text-primary-200 opacity-50"
+                >
+                    <Icon name="tabler/person-run" class="h-28 w-32" />
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div class="site-container my-7">
+        <div class="overflow-x-auto">
+            <table class="min-w-ful bg-none" id="table-5k">
+                <thead>
+                    <tr class="bg-base-800 text-white">
+                        <th
+                            class="px-2 py-3 w-4 text-left text-lg font-semibold"
+                            >General</th
+                        >
+                        <th
+                            class="px-2 py-3 w-4 text-left text-lg font-semibold"
+                            >Categoría</th
+                        >
+                        <th class="px-2 py-3 text-left text-lg font-semibold"
+                            >Dorsal</th
+                        >
+                        <th class="px-2 py-3 text-left text-lg font-semibold"
+                            >Nombres</th
+                        >
+                        <th class="px-2 py-3 text-left text-lg font-semibold"
+                            >Categoría</th
+                        >
+                        <th class="px-2 py-3 text-left text-lg font-semibold"
+                            >Tiempo Meta</th
+                        >
+                    </tr>
+                </thead>
+                <tbody class="divide-y divide-gray-200">
+                    <tr class="hover:bg-primary-700 transition-colors">
+                        <td class="px-2 py-2 text-md"
+                            ><span>Posición General: </span>1</td
+                        >
+                        <td class="px-2 py-2 text-md"
+                            ><span>Posición Categoría: </span>1</td
+                        >
+                        <td class="px-2 py-2 text-md"
+                            ><span>Dorsal: #</span> 42</td
+                        >
+                        <td class="px-2 py-2 text-md font-medium"
+                            >Jesus David Hernandez Argota</td
+                        >
+                        <td class="px-2 py-2 text-md"
+                            ><span>Categoría: </span> 30 a 45 años Masculino</td
+                        >
+                        <td class="px-2 py-2 text-md">00:20:11</td>
+                    </tr>
+                    <tr
+                        class="hover:bg-primary-700 transition-colors dark:bg-primary-800"
+                    >
+                        <td class="px-2 py-2 text-md">2</td>
+                        <td class="px-2 py-2 text-md">2</td>
+                        <td class="px-2 py-2 text-md">96</td>
+                        <td class="px-2 py-2 text-md font-medium"
+                            >Yohn Pino Granadillo</td
+                        >
+                        <td class="px-2 py-2 text-md">30 a 45 años Masculino</td
+                        >
+                        <td class="px-2 py-2 text-md">00:20:56</td>
+                    </tr>
+                    <tr class="hover:bg-primary-700 transition-colors">
+                        <td class="px-2 py-2 text-md">3</td>
+                        <td class="px-2 py-2 text-md">3</td>
+                        <td class="px-2 py-2 text-md">52</td>
+                        <td class="px-2 py-2 text-md font-medium"
+                            >Juan Carlos Granados Cabas</td
+                        >
+                        <td class="px-2 py-2 text-md">30 a 45 años Masculino</td
+                        >
+                        <td class="px-2 py-2 text-md">00:22:10</td>
+                    </tr>
+                    <tr
+                        class="hover:bg-primary-700 transition-colors dark:bg-primary-800"
+                    >
+                        <td class="px-2 py-2 text-md">4</td>
+                        <td class="px-2 py-2 text-md">4</td>
+                        <td class="px-2 py-2 text-md">54</td>
+                        <td class="px-2 py-2 text-md font-medium"
+                            >Juan José Dávila Mejía</td
+                        >
+                        <td class="px-2 py-2 text-md">30 a 45 años Masculino</td
+                        >
+                        <td class="px-2 py-2 text-md">00:24:03</td>
+                    </tr>
+                    <tr class="hover:bg-primary-700 transition-colors">
+                        <td class="px-2 py-2 text-md">5</td>
+                        <td class="px-2 py-2 text-md">1</td>
+                        <td class="px-2 py-2 text-md">91</td>
+                        <td class="px-2 py-2 text-md font-medium"
+                            >Samuel Restrepo Arrieta</td
+                        >
+                        <td class="px-2 py-2 text-md"
+                            >Hasta 29 años Masculino</td
+                        >
+                        <td class="px-2 py-2 text-md">00:24:34</td>
+                    </tr>
+                    <tr
+                        class="hover:bg-primary-700 transition-colors dark:bg-primary-800"
+                    >
+                        <td class="px-2 py-2 text-md">6</td>
+                        <td class="px-2 py-2 text-md">5</td>
+                        <td class="px-2 py-2 text-md">87</td>
+                        <td class="px-2 py-2 text-md font-medium"
+                            >Ronald Restrepo Brekeman</td
+                        >
+                        <td class="px-2 py-2 text-md">30 a 45 años Masculino</td
+                        >
+                        <td class="px-2 py-2 text-md">00:25:14</td>
+                    </tr>
+                    <tr class="hover:bg-primary-700 transition-colors">
+                        <td class="px-2 py-2 text-md">7</td>
+                        <td class="px-2 py-2 text-md">6</td>
+                        <td class="px-2 py-2 text-md">66</td>
+                        <td class="px-2 py-2 text-md font-medium"
+                            >Manuel Lizarazo</td
+                        >
+                        <td class="px-2 py-2 text-md">30 a 45 años Masculino</td
+                        >
+                        <td class="px-2 py-2 text-md">00:25:20</td>
+                    </tr>
+                    <tr
+                        class="hover:bg-primary-700 transition-colors dark:bg-primary-800"
+                    >
+                        <td class="px-2 py-2 text-md">8</td>
+                        <td class="px-2 py-2 text-md">2</td>
+                        <td class="px-2 py-2 text-md">67</td>
+                        <td class="px-2 py-2 text-md font-medium"
+                            >Manuel De Jesús Escobar Contreras</td
+                        >
+                        <td class="px-2 py-2 text-md"
+                            >Hasta 29 años Masculino</td
+                        >
+                        <td class="px-2 py-2 text-md">00:27:48</td>
+                    </tr>
+                    <tr class="hover:bg-primary-700 transition-colors">
+                        <td class="px-2 py-2 text-md">9</td>
+                        <td class="px-2 py-2 text-md">7</td>
+                        <td class="px-2 py-2 text-md">28</td>
+                        <td class="px-2 py-2 text-md font-medium"
+                            >Efraín José Lozano Medina</td
+                        >
+                        <td class="px-2 py-2 text-md">30 a 45 años Masculino</td
+                        >
+                        <td class="px-2 py-2 text-md">00:27:49</td>
+                    </tr>
+                    <tr
+                        class="hover:bg-primary-700 transition-colors dark:bg-primary-800"
+                    >
+                        <td class="px-2 py-2 text-md">10</td>
+                        <td class="px-2 py-2 text-md">1</td>
+                        <td class="px-2 py-2 text-md">10</td>
+                        <td class="px-2 py-2 text-md font-medium"
+                            >Antonia Estrada Salazar</td
+                        >
+                        <td class="px-2 py-2 text-md">Hasta 29 años Femenino</td
+                        >
+                        <td class="px-2 py-2 text-md">00:28:21</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>
+<script>
+    import DataTable from "datatables.net-dt";
+
+    // let table = new DataTable("#table-5k", {});
+</script>
+
+<style>
+    li:hover span {
+        transform: scale(1.1);
+        transition: transform 0.2s ease-in-out;
+    }
+    li span {
+        transition: transform 0.3s ease-in-out;
+    }
+    li div {
+        right: -50%;
+        top: 0;
+        transition:
+            right 0.3s ease-in-out,
+            transform 0.3s ease-in-out;
+    }
+    li:hover div {
+        right: 0%;
+        transform: scale(1.1);
+        transition: right 0.3s ease-in-out;
+    }
+    @media (max-width: 640px) {
+        table {
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        table thead {
+            display: none;
+        }
+
+        table,
+        table tbody,
+        table tr,
+        table td {
+            display: block;
+            width: 100%;
+        }
+
+        table tr {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 12px;
+            margin-bottom: 12px;
+            border: 1px solid #e9ecef;
+            border-radius: 6px;
+        }
+
+        table tr td {
+            padding: 8px 5px;
+            position: relative;
+            font-size: 0.95rem;
+        }
+
+        table tr td:nth-child(1) {
+            width: 50%;
+            order: 1;
+        }
+
+        table tr td:nth-child(2) {
+            width: 50%;
+            order: 2;
+        }
+
+        table tr td:nth-child(3) {
+            width: 50%;
+            order: 3;
+        }
+
+        table tr td:nth-child(4) {
+            order: 0;
+            width: 100%;
+            font-size: 1.1rem;
+            font-weight: 600;
+            border-bottom: 2px solid #e2e8f0;
+            @apply bg-gradient-to-r from-base-900 to-base-600/90 bg-clip-text pb-4 text-lg font-medium text-transparent md:text-6xl dark:from-base-300 dark:to-base-400/90;
+        }
+
+        table tr td:nth-child(5) {
+            width: 50%;
+            order: 4;
+        }
+
+        table tr td:nth-child(6) {
+            width: 100%;
+            order: 5;
+            color: white;
+            padding: 12px 16px;
+            border-radius: 6px;
+            font-family: monospace;
+            font-size: 1.2rem;
+            text-align: center;
+            box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.5);
+            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+            letter-spacing: 2px;
+            @appy bg-gradient-to-r from-base-900 to-base-600/90;
+        }
+
+        table td {
+            text-align: center;
+        }
+        table td span {
+            font-weight: bold;
+            margin-bottom: 4px;
+            display: block;
+        }
+        table td::before {
+            content: attr(data-label);
+            font-weight: 600;
+            color: #4a5568;
+            margin-bottom: 4px;
+            display: block;
+        }
+    }
+</style>

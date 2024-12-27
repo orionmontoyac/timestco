@@ -18,6 +18,7 @@ interface FeatureData {
   image: ImageMetadata;
   title: string;
   text: string;
+  link: string; // Add link property
 }
 
 // data
@@ -26,16 +27,19 @@ const featureData: FeatureData[] = [
     image: race1,
     title: "Carrera Navideña 10K Team VO2MAX 2024",
     text: `Ibagué Noviembre 30`,
+    link: "/carrera-navideña-10k-team-vo2max-2024" // Add link
   },
   {
     image: race2,
     title: "Media Maratón de la Caña 2024",
     text: `Palmira Valle del Cauca Noviembre 24`,
+    link: "/media-maraton-de-la-cana-2024" // Add link
   },
   {
     image: race3,
     title: "Los Andes Trail 2024",
     text: `Andes Noviembre 7`,
+    link: "/los-andes-trail-2024" // Add link
   }
 ];
 ---
@@ -45,11 +49,13 @@ const featureData: FeatureData[] = [
     <div class="grid gap-4 sm:grid-cols-2 md:grid-cols-4">
       {
         featureData.map((feature) => (
-          <FeatureCard
-            title={feature.title}
-            text={feature.text}
-            image={feature.image}
-          />
+          <a href="/"> <!-- Wrap FeatureCard with anchor tag -->
+            <FeatureCard
+              title={feature.title}
+              text={feature.text}
+              image={feature.image}
+            />
+          </a>
         ))
       }
     </div>

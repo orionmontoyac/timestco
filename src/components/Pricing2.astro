@@ -1,0 +1,81 @@
+---
+/**
+ * * pricing section for one price only
+ * For those who like to keep it simple
+ */
+
+import { Icon } from "astro-icon/components";
+
+// components
+import Button from "@components/Button.astro";
+
+interface pricingItem {
+  description: string; // plan description
+  price: {
+    monthly: number; // monthly price
+  };
+  features: string[]; // list of features
+}
+
+interface Props {
+  categoryName: string;
+}
+
+const pricingData: pricingItem = {
+  description: "One low monthly price",
+  price: {
+    monthly: 14.99,
+  },
+  features: [
+    "All current features",
+    "All future updates",
+    "Advanced analytics",
+    "1 user",
+    "Private forum access",
+    "Discord channel access",
+  ],
+};
+
+const { categoryName } = Astro.props;
+---
+
+<section id="pricing" class="my-14 overflow-hidden md:my-16">
+  <div
+    class="relative mx-auto h-full w-full overflow-hidden rounded-2xl bg-gradient-to-br from-primary-400 to-base-300 to-40% dark:from-primary-500 dark:to-base-600/60 md:col-span-2 hover:cursor-pointer hover:shadow-lg transition-transform duration-300"
+  >
+    <div class="relative h-full p-px">
+      <div
+        class="relative z-10 flex h-full flex-col overflow-hidden rounded-[calc(1rem-1px)] bg-primary-100 dark:bg-base-800"
+      >
+        <!-- inside card glow -->
+        <div
+          class="absolute left-0 top-0 -z-10 mx-auto aspect-square w-full max-w-7xl -translate-x-1/2 -translate-y-1/2 rounded-full bg-primary-300/40 blur-3xl dark:bg-primary-600/20"
+          aria-hidden="true"
+        >
+        </div>
+        <!-- card content -->
+        <div
+          class="mx-auto flex h-full w-full max-w-xs flex-col justify-center px-6 py-10 text-center"
+        >
+          <h3 class="text-lg">Tiempos</h3>
+
+          <p class="mt-6 flex flex-wrap items-end justify-center">
+            <span
+              class="text-5xl font-semibold text-primary-600 dark:text-primary-400"
+            >
+              {categoryName}
+            </span>
+            <!-- <span class="text-3xl">/mo</span> -->
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  section:hover p span {
+    transform: scale(1.5);
+    transition: scale 0.3s ease-in-out;
+  }
+</style>
