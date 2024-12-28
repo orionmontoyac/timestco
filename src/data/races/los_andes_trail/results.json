@@ -1,0 +1,283 @@
+{
+    "distance": [
+        {
+            "name": "5K",
+            "results": [
+                {
+                    "general_position": 1,
+                    "category_position": 1,
+                    "dorsal": "42",
+                    "name": "Jesus David Hernandez Argota",
+                    "category": "30 a 45 años Masculino",
+                    "time": "00:20:11"
+                },
+                {
+                    "general_position": 2,
+                    "category_position": 2,
+                    "dorsal": "43",
+                    "name": "Juan Perez",
+                    "category": "30 a 45 años Masculino",
+                    "time": "00:21:15"
+                },
+                {
+                    "general_position": 3,
+                    "category_position": 3,
+                    "dorsal": "44",
+                    "name": "Carlos Sanchez",
+                    "category": "30 a 45 años Masculino",
+                    "time": "00:22:10"
+                },
+                {
+                    "general_position": 4,
+                    "category_position": 4,
+                    "dorsal": "45",
+                    "name": "Miguel Rodriguez",
+                    "category": "30 a 45 años Masculino",
+                    "time": "00:23:05"
+                },
+                {
+                    "general_position": 5,
+                    "category_position": 5,
+                    "dorsal": "46",
+                    "name": "Luis Martinez",
+                    "category": "30 a 45 años Masculino",
+                    "time": "00:24:00"
+                },
+                {
+                    "general_position": 6,
+                    "category_position": 6,
+                    "dorsal": "47",
+                    "name": "Jorge Ramirez",
+                    "category": "30 a 45 años Masculino",
+                    "time": "00:24:55"
+                },
+                {
+                    "general_position": 7,
+                    "category_position": 7,
+                    "dorsal": "48",
+                    "name": "Oscar Gomez",
+                    "category": "30 a 45 años Masculino",
+                    "time": "00:25:50"
+                },
+                {
+                    "general_position": 8,
+                    "category_position": 8,
+                    "dorsal": "49",
+                    "name": "Fernando Diaz",
+                    "category": "30 a 45 años Masculino",
+                    "time": "00:26:45"
+                },
+                {
+                    "general_position": 9,
+                    "category_position": 9,
+                    "dorsal": "50",
+                    "name": "Rafael Torres",
+                    "category": "30 a 45 años Masculino",
+                    "time": "00:27:40"
+                },
+                {
+                    "general_position": 10,
+                    "category_position": 10,
+                    "dorsal": "51",
+                    "name": "Andres Ruiz",
+                    "category": "30 a 45 años Masculino",
+                    "time": "00:28:35"
+                },
+                {
+                    "general_position": 11,
+                    "category_position": 11,
+                    "dorsal": "52",
+                    "name": "Mario Lopez",
+                    "category": "30 a 45 años Masculino",
+                    "time": "00:29:30"
+                },
+                {
+                    "general_position": 12,
+                    "category_position": 12,
+                    "dorsal": "53",
+                    "name": "Hector Morales",
+                    "category": "30 a 45 años Masculino",
+                    "time": "00:30:25"
+                },
+                {
+                    "general_position": 13,
+                    "category_position": 13,
+                    "dorsal": "54",
+                    "name": "Alberto Ortiz",
+                    "category": "30 a 45 años Masculino",
+                    "time": "00:31:20"
+                },
+                {
+                    "general_position": 14,
+                    "category_position": 14,
+                    "dorsal": "55",
+                    "name": "Ricardo Herrera",
+                    "category": "30 a 45 años Masculino",
+                    "time": "00:32:15"
+                },
+                {
+                    "general_position": 15,
+                    "category_position": 15,
+                    "dorsal": "56",
+                    "name": "Francisco Castro",
+                    "category": "30 a 45 años Masculino",
+                    "time": "00:33:10"
+                }
+            ]
+        },
+        {
+            "name": "10K",
+            "results": [
+                {
+                    "general_position": 1,
+                    "category_position": 1,
+                    "dorsal": "57",
+                    "name": "Ana Maria Gonzalez",
+                    "category": "30 a 45 años Femenino",
+                    "time": "00:40:11"
+                },
+                {
+                    "general_position": 2,
+                    "category_position": 2,
+                    "dorsal": "58",
+                    "name": "Laura Martinez",
+                    "category": "30 a 45 años Femenino",
+                    "time": "00:41:15"
+                },
+                {
+                    "general_position": 3,
+                    "category_position": 3,
+                    "dorsal": "59",
+                    "name": "Carmen Rodriguez",
+                    "category": "30 a 45 años Femenino",
+                    "time": "00:42:10"
+                },
+                {
+                    "general_position": 4,
+                    "category_position": 4,
+                    "dorsal": "60",
+                    "name": "Patricia Sanchez",
+                    "category": "30 a 45 años Femenino",
+                    "time": "00:43:05"
+                },
+                {
+                    "general_position": 5,
+                    "category_position": 5,
+                    "dorsal": "61",
+                    "name": "Marta Lopez",
+                    "category": "30 a 45 años Femenino",
+                    "time": "00:44:00"
+                },
+                {
+                    "general_position": 6,
+                    "category_position": 6,
+                    "dorsal": "62",
+                    "name": "Sofia Ramirez",
+                    "category": "30 a 45 años Femenino",
+                    "time": "00:44:55"
+                },
+                {
+                    "general_position": 7,
+                    "category_position": 7,
+                    "dorsal": "63",
+                    "name": "Isabel Gomez",
+                    "category": "30 a 45 años Femenino",
+                    "time": "00:45:50"
+                },
+                {
+                    "general_position": 8,
+                    "category_position": 8,
+                    "dorsal": "64",
+                    "name": "Lucia Diaz",
+                    "category": "30 a 45 años Femenino",
+                    "time": "00:46:45"
+                },
+                {
+                    "general_position": 9,
+                    "category_position": 9,
+                    "dorsal": "65",
+                    "name": "Elena Torres",
+                    "category": "30 a 45 años Femenino",
+                    "time": "00:47:40"
+                },
+                {
+                    "general_position": 10,
+                    "category_position": 10,
+                    "dorsal": "66",
+                    "name": "Paula Ruiz",
+                    "category": "30 a 45 años Femenino",
+                    "time": "00:48:35"
+                },
+                {
+                    "general_position": 11,
+                    "category_position": 11,
+                    "dorsal": "67",
+                    "name": "Clara Lopez",
+                    "category": "30 a 45 años Femenino",
+                    "time": "00:49:30"
+                },
+                {
+                    "general_position": 12,
+                    "category_position": 12,
+                    "dorsal": "68",
+                    "name": "Teresa Morales",
+                    "category": "30 a 45 años Femenino",
+                    "time": "00:50:25"
+                },
+                {
+                    "general_position": 13,
+                    "category_position": 13,
+                    "dorsal": "69",
+                    "name": "Angela Ortiz",
+                    "category": "30 a 45 años Femenino",
+                    "time": "00:51:20"
+                }
+            ]
+        },
+        {
+            "name": "22K",
+            "results": [
+                {
+                    "general_position": 1,
+                    "category_position": 1,
+                    "dorsal": "70",
+                    "name": "Pedro Alvarez",
+                    "category": "30 a 45 años Masculino",
+                    "time": "01:20:11"
+                },
+                {
+                    "general_position": 2,
+                    "category_position": 2,
+                    "dorsal": "71",
+                    "name": "Santiago Ramirez",
+                    "category": "30 a 45 años Masculino",
+                    "time": "01:21:15"
+                },
+                {
+                    "general_position": 3,
+                    "category_position": 3,
+                    "dorsal": "72",
+                    "name": "Diego Fernandez",
+                    "category": "30 a 45 años Masculino",
+                    "time": "01:22:10"
+                },
+                {
+                    "general_position": 4,
+                    "category_position": 4,
+                    "dorsal": "73",
+                    "name": "Javier Gomez",
+                    "category": "30 a 45 años Masculino",
+                    "time": "01:23:05"
+                },
+                {
+                    "general_position": 5,
+                    "category_position": 5,
+                    "dorsal": "74",
+                    "name": "Manuel Torres",
+                    "category": "30 a 45 años Masculino",
+                    "time": "01:24:00"
+                }
+            ]
+        }
+    ]
+}

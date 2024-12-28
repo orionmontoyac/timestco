@@ -1,185 +1,7 @@
 ---
 import { Icon } from "astro-icon/components";
 
-interface CategoryResults {
-    general_position: number;
-    category_position: number;
-    dorsal: string;
-    name: string;
-    category: string;
-    time: string;
-}
-
-const categoryResults: CategoryResults[] = [
-    {
-        general_position: 1,
-        category_position: 1,
-        dorsal: "42",
-        name: "Jesus David Hernandez Argota",
-        category: "30 a 45 años Masculino",
-        time: "00:20:11",
-    },
-    {
-        general_position: 2,
-        category_position: 1,
-        dorsal: "43",
-        name: "Maria Lopez",
-        category: "30 a 45 años Femenino",
-        time: "00:21:15",
-    },
-    {
-        general_position: 3,
-        category_position: 2,
-        dorsal: "44",
-        name: "Carlos Perez",
-        category: "30 a 45 años Masculino",
-        time: "00:22:10",
-    },
-    {
-        general_position: 4,
-        category_position: 1,
-        dorsal: "45",
-        name: "Ana Gomez",
-        category: "18 a 29 años Femenino",
-        time: "00:23:05",
-    },
-    {
-        general_position: 5,
-        category_position: 2,
-        dorsal: "46",
-        name: "Luis Martinez",
-        category: "18 a 29 años Masculino",
-        time: "00:24:00",
-    },
-    {
-        general_position: 6,
-        category_position: 3,
-        dorsal: "47",
-        name: "Laura Sanchez",
-        category: "30 a 45 años Femenino",
-        time: "00:25:30",
-    },
-    {
-        general_position: 7,
-        category_position: 3,
-        dorsal: "48",
-        name: "Jorge Ramirez",
-        category: "30 a 45 años Masculino",
-        time: "00:26:45",
-    },
-    {
-        general_position: 8,
-        category_position: 2,
-        dorsal: "49",
-        name: "Sofia Torres",
-        category: "18 a 29 años Femenino",
-        time: "00:27:50",
-    },
-    {
-        general_position: 9,
-        category_position: 4,
-        dorsal: "50",
-        name: "Miguel Diaz",
-        category: "30 a 45 años Masculino",
-        time: "00:28:55",
-    },
-    {
-        general_position: 10,
-        category_position: 1,
-        dorsal: "51",
-        name: "Isabel Fernandez",
-        category: "46 a 60 años Femenino",
-        time: "00:29:20",
-    },
-    {
-        general_position: 11,
-        category_position: 4,
-        dorsal: "52",
-        name: "Ricardo Morales",
-        category: "18 a 29 años Masculino",
-        time: "00:30:15",
-    },
-    {
-        general_position: 12,
-        category_position: 2,
-        dorsal: "53",
-        name: "Patricia Ruiz",
-        category: "46 a 60 años Femenino",
-        time: "00:31:10",
-    },
-    {
-        general_position: 13,
-        category_position: 5,
-        dorsal: "54",
-        name: "Fernando Ortiz",
-        category: "30 a 45 años Masculino",
-        time: "00:32:05",
-    },
-    {
-        general_position: 14,
-        category_position: 3,
-        dorsal: "55",
-        name: "Gabriela Castro",
-        category: "46 a 60 años Femenino",
-        time: "00:33:00",
-    },
-    {
-        general_position: 15,
-        category_position: 6,
-        dorsal: "56",
-        name: "Juan Vargas",
-        category: "30 a 45 años Masculino",
-        time: "00:34:55",
-    },
-    {
-        general_position: 16,
-        category_position: 1,
-        dorsal: "57",
-        name: "Lucia Mendoza",
-        category: "18 a 29 años Femenino",
-        time: "00:35:50",
-    },
-    {
-        general_position: 17,
-        category_position: 7,
-        dorsal: "58",
-        name: "Pedro Herrera",
-        category: "30 a 45 años Masculino",
-        time: "00:36:45",
-    },
-    {
-        general_position: 18,
-        category_position: 4,
-        dorsal: "59",
-        name: "Elena Rojas",
-        category: "46 a 60 años Femenino",
-        time: "00:37:40",
-    },
-    {
-        general_position: 19,
-        category_position: 8,
-        dorsal: "60",
-        name: "Alberto Jimenez",
-        category: "30 a 45 años Masculino",
-        time: "00:38:35",
-    },
-    {
-        general_position: 20,
-        category_position: 5,
-        dorsal: "61",
-        name: "Carmen Chavez",
-        category: "46 a 60 años Femenino",
-        time: "00:39:30",
-    },
-    {
-        general_position: 21,
-        category_position: 9,
-        dorsal: "62",
-        name: "Rafael Soto",
-        category: "30 a 45 años Masculino",
-        time: "00:40:25",
-    },
-];
+import categoryResults from "@data/races/los_andes_trail/results.json";
 ---
 
 <section>
@@ -190,137 +12,163 @@ const categoryResults: CategoryResults[] = [
                 id="tabs"
                 class="dark:bg-primary-800 border border-gray-300 text-gray-900 text-md rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
             >
-                <option>5K</option>
-                <option>10K</option>
-                <option>22K</option>
+                {
+                    categoryResults["distance"].map((distance) => (
+                        <option>{distance.name}</option>
+                    ))
+                }
             </select>
         </div>
         <ul
             class="hidden text-md font-medium text-center text-gray-500 rounded-lg shadow sm:flex"
         >
-            <li
-                class="w-full focus-within:z-10 border border-base-300 hover:cursor-pointer overflow-hidden relative"
-            >
-                <button class="w-full">
-                    <span
-                        class="main-text-gradient inline-block text-5xl w-full p-4 font-bold"
-                        aria-current="page">5K</span
-                    >
-                </button>
+            {
+                categoryResults["distance"].map((distance) => (
+                    <li class="w-full focus-within:z-10 border border-base-300 hover:cursor-pointer overflow-hidden relative">
+                        <button class="w-full focus-within:shadow-lg" data-distance={distance.name}>
+                            <span
+                                class="main-text-gradient inline-block text-5xl w-full p-4 font-bold"
+                                aria-current="page"
+                            >
+                                {distance.name}
+                            </span>
+                        </button>
 
-                <div
-                    class="absolute text-primary-800 dark:text-primary-200 opacity-50"
-                >
-                    <Icon name="tabler/person-run" class="h-28 w-32" />
-                </div>
-            </li>
-            <li
-                class="w-full focus-within:z-10 border border-base-300 overflow-hidden relative"
-            >
-                <button class="w-full">
-                    <span
-                        class="inline-block main-text-gradient text-5xl w-full p-4 font-bold hover:cursor-pointer"
-                        >10K</span
-                    >
-                </button>
-
-                <div
-                    class="absolute text-primary-800 dark:text-primary-200 opacity-50"
-                >
-                    <Icon name="tabler/person-run" class="h-28 w-32" />
-                </div>
-            </li>
-            <li
-                class="w-full focus-within:z-10 border border-base-300 overflow-hidden relative"
-            >
-                <button class="w-full">
-                    <span
-                        class="inline-block main-text-gradient text-5xl w-full p-4 font-bold hover:cursor-pointer"
-                        >22K</span
-                    >
-                </button>
-
-                <div
-                    class="absolute text-primary-800 dark:text-primary-200 opacity-50"
-                >
-                    <Icon name="tabler/person-run" class="h-28 w-32" />
-                </div>
-            </li>
+                        <div class="absolute text-primary-800 dark:text-primary-200 opacity-50">
+                            <Icon name="tabler/person-run" class="h-28 w-32" />
+                        </div>
+                    </li>
+                ))
+            }
         </ul>
     </div>
-    <div class="site-container my-7">
-        <div class="overflow-x-auto">
-            <table class="min-w-ful bg-none w-full" id="table-5k">
-                <thead>
-                    <tr class="bg-base-800 text-white">
-                        <th
-                            class="px-2 py-3 w-4 text-left text-lg font-semibold"
-                            >General</th
-                        >
-                        <th
-                            class="px-2 py-3 w-4 text-left text-lg font-semibold"
-                            >Categoría</th
-                        >
-                        <th class="px-2 py-3 text-left text-lg font-semibold"
-                            >Dorsal</th
-                        >
-                        <th class="px-2 py-3 text-left text-lg font-semibold"
-                            >Nombres</th
-                        >
-                        <th class="px-2 py-3 text-left text-lg font-semibold"
-                            >Categoría</th
-                        >
-                        <th class="px-2 py-3 text-left text-lg font-semibold"
-                            >Tiempo Meta</th
-                        >
-                    </tr>
-                </thead>
-                <tbody class="divide-y divide-gray-200">
-                    {
-                        categoryResults.map((result) => (
-                            <tr class="dark:hover:bg-primary-900 hover:bg-base-300 transition-colors">
-                                <td class="px-2 py-2 text-md">
-                                    <span>Posición General: </span>
-                                    {result.general_position}
-                                </td>
-                                <td class="px-2 py-2 text-md">
-                                    <span>Posición Categoría: </span>
-                                    {result.category_position}
-                                </td>
-                                <td class="px-2 py-2 text-md">
-                                    <span>Dorsal: </span>#{result.dorsal}
-                                </td>
-                                <td class="px-2 py-2 text-md font-medium">
-                                    {result.name}
-                                </td>
-                                <td class="px-2 py-2 text-md">
-                                    <span>Categoría: </span>
-                                    {result.category}
-                                </td>
-                                <td class="px-2 py-2 text-md">{result.time}</td>
+
+    {
+        categoryResults["distance"].map((distance) => (
+            <div
+                class="site-container my-7 hide-table"
+                id={"table-" + distance.name}
+            >
+                <div class="overflow-x-auto">
+                    <table class="min-w-ful bg-none w-full">
+                        <thead>
+                            <tr class="bg-base-800 text-white">
+                                <th class="px-2 py-3 w-4 text-left text-lg font-semibold">
+                                    General
+                                </th>
+                                <th class="px-2 py-3 w-4 text-left text-lg font-semibold">
+                                    Categoría
+                                </th>
+                                <th class="px-2 py-3 text-left text-lg font-semibold">
+                                    Dorsal
+                                </th>
+                                <th class="px-2 py-3 text-left text-lg font-semibold">
+                                    Nombres
+                                </th>
+                                <th class="px-2 py-3 text-left text-lg font-semibold">
+                                    Categoría
+                                </th>
+                                <th class="px-2 py-3 text-left text-lg font-semibold">
+                                    Tiempo Meta
+                                </th>
                             </tr>
-                        ))
-                    }
-                </tbody>
-            </table>
-        </div>
-    </div>
+                        </thead>
+                        <tbody class="divide-y divide-gray-200">
+                            {distance.results.map((result) => (
+                                <tr class="dark:hover:bg-primary-900 hover:bg-base-300 transition-colors">
+                                    <td class="px-2 py-2 text-md">
+                                        <span>Posición General: </span>
+                                        {result.general_position}
+                                    </td>
+                                    <td class="px-2 py-2 text-md">
+                                        <span>Posición Categoría: </span>
+                                        {result.category_position}
+                                    </td>
+                                    <td class="px-2 py-2 text-md">
+                                        <span>Dorsal: </span>#{result.dorsal}
+                                    </td>
+                                    <td class="px-2 py-2 text-md font-medium">
+                                        <div class="flex">
+                                            <p>{result.name}</p>
+                                            {result.general_position === 1 && (
+                                                <Icon
+                                                    name="tabler/medal"
+                                                    class="h-6 w-6 text-yellow-500 dark:text-yellow-300"
+                                                />
+                                            )}
+                                            {result.general_position === 2 && (
+                                                <Icon
+                                                    name="tabler/medal"
+                                                    class="h-6 w-6 text-gray-500 dark:text-gray-300"
+                                                />
+                                            )}
+                                            {result.general_position === 3 && (
+                                                <Icon
+                                                    name="tabler/medal"
+                                                    class="h-6 w-6 text-yellow-800"
+                                                />
+                                            )}
+                                        </div>
+                                    </td>
+                                    <td class="px-2 py-2 text-md">
+                                        <span>Categoría: </span>
+                                        {result.category}
+                                    </td>
+                                    <td class="px-2 py-2 text-md">
+                                        {result.time}
+                                    </td>
+                                </tr>
+                            ))}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        ))
+    }
 </section>
 <script>
     import DataTable from "datatables.net-dt";
 
-    let table = new DataTable("#table-5k", {
-        info: false,
-        order: [[0, "asc"]],
-        columnDefs: [{ type: "num", targets: 0 }],
-        language: {
-            search: "Buscar:",
-            entries: {
-                _: "Correodores por página",
-                1: "person",
+    document.addEventListener("DOMContentLoaded", () => {
+        document.querySelectorAll("button[data-distance]").forEach((button) => {
+            button.addEventListener("click", () => {
+                showTable(button.getAttribute("data-distance") as string);
+            });
+        });
+    });
+
+    function showTable(distanceName: string) {
+        console.log(distanceName);
+
+        document
+            .querySelector("div#table-" + distanceName)
+            ?.classList.toggle("hide-table");
+
+        document.querySelectorAll("div[id^='table-']").forEach((table) => {
+            if (table.id !== "table-" + distanceName) {
+                table.classList.add("hide-table");
+            }
+        });
+
+        
+    }
+
+    import categoryResults from "@data/races/los_andes_trail/results.json";
+
+    categoryResults["distance"].forEach((distance) => {
+        new DataTable(`div#table-${distance.name} table`, {
+            info: false,
+            order: [[0, "asc"]],
+            columnDefs: [{ type: "num", targets: 0 }],
+            language: {
+                search: "Buscar:",
+                entries: {
+                    _: "Correodores por página",
+                    1: "Corredor",
+                },
+                zeroRecords: "No se encontraron resultados",
             },
-            zeroRecords: "No se encontraron resultados",
-        },
+        });
     });
 </script>
 
@@ -346,6 +194,18 @@ const categoryResults: CategoryResults[] = [
     }
     table span {
         display: none;
+    }
+    div.hide-table {
+        display: none;
+    }
+    table thead tr th:nth-child(1) {
+        width: 10%;
+    }
+    table thead tr th:nth-child(2) {
+        width: 10%;
+    }
+    table thead tr th:nth-child(3) {
+        width: 10%;
     }
     @media (max-width: 640px) {
         table {
@@ -440,5 +300,8 @@ const categoryResults: CategoryResults[] = [
             margin-bottom: 2px;
             display: block;
         }
+    }
+    .text-gold {
+        color: gold;
     }
 </style>
