@@ -1,5 +1,185 @@
 ---
 import { Icon } from "astro-icon/components";
+
+interface CategoryResults {
+    general_position: number;
+    category_position: number;
+    dorsal: string;
+    name: string;
+    category: string;
+    time: string;
+}
+
+const categoryResults: CategoryResults[] = [
+    {
+        general_position: 1,
+        category_position: 1,
+        dorsal: "42",
+        name: "Jesus David Hernandez Argota",
+        category: "30 a 45 años Masculino",
+        time: "00:20:11",
+    },
+    {
+        general_position: 2,
+        category_position: 1,
+        dorsal: "43",
+        name: "Maria Lopez",
+        category: "30 a 45 años Femenino",
+        time: "00:21:15",
+    },
+    {
+        general_position: 3,
+        category_position: 2,
+        dorsal: "44",
+        name: "Carlos Perez",
+        category: "30 a 45 años Masculino",
+        time: "00:22:10",
+    },
+    {
+        general_position: 4,
+        category_position: 1,
+        dorsal: "45",
+        name: "Ana Gomez",
+        category: "18 a 29 años Femenino",
+        time: "00:23:05",
+    },
+    {
+        general_position: 5,
+        category_position: 2,
+        dorsal: "46",
+        name: "Luis Martinez",
+        category: "18 a 29 años Masculino",
+        time: "00:24:00",
+    },
+    {
+        general_position: 6,
+        category_position: 3,
+        dorsal: "47",
+        name: "Laura Sanchez",
+        category: "30 a 45 años Femenino",
+        time: "00:25:30",
+    },
+    {
+        general_position: 7,
+        category_position: 3,
+        dorsal: "48",
+        name: "Jorge Ramirez",
+        category: "30 a 45 años Masculino",
+        time: "00:26:45",
+    },
+    {
+        general_position: 8,
+        category_position: 2,
+        dorsal: "49",
+        name: "Sofia Torres",
+        category: "18 a 29 años Femenino",
+        time: "00:27:50",
+    },
+    {
+        general_position: 9,
+        category_position: 4,
+        dorsal: "50",
+        name: "Miguel Diaz",
+        category: "30 a 45 años Masculino",
+        time: "00:28:55",
+    },
+    {
+        general_position: 10,
+        category_position: 1,
+        dorsal: "51",
+        name: "Isabel Fernandez",
+        category: "46 a 60 años Femenino",
+        time: "00:29:20",
+    },
+    {
+        general_position: 11,
+        category_position: 4,
+        dorsal: "52",
+        name: "Ricardo Morales",
+        category: "18 a 29 años Masculino",
+        time: "00:30:15",
+    },
+    {
+        general_position: 12,
+        category_position: 2,
+        dorsal: "53",
+        name: "Patricia Ruiz",
+        category: "46 a 60 años Femenino",
+        time: "00:31:10",
+    },
+    {
+        general_position: 13,
+        category_position: 5,
+        dorsal: "54",
+        name: "Fernando Ortiz",
+        category: "30 a 45 años Masculino",
+        time: "00:32:05",
+    },
+    {
+        general_position: 14,
+        category_position: 3,
+        dorsal: "55",
+        name: "Gabriela Castro",
+        category: "46 a 60 años Femenino",
+        time: "00:33:00",
+    },
+    {
+        general_position: 15,
+        category_position: 6,
+        dorsal: "56",
+        name: "Juan Vargas",
+        category: "30 a 45 años Masculino",
+        time: "00:34:55",
+    },
+    {
+        general_position: 16,
+        category_position: 1,
+        dorsal: "57",
+        name: "Lucia Mendoza",
+        category: "18 a 29 años Femenino",
+        time: "00:35:50",
+    },
+    {
+        general_position: 17,
+        category_position: 7,
+        dorsal: "58",
+        name: "Pedro Herrera",
+        category: "30 a 45 años Masculino",
+        time: "00:36:45",
+    },
+    {
+        general_position: 18,
+        category_position: 4,
+        dorsal: "59",
+        name: "Elena Rojas",
+        category: "46 a 60 años Femenino",
+        time: "00:37:40",
+    },
+    {
+        general_position: 19,
+        category_position: 8,
+        dorsal: "60",
+        name: "Alberto Jimenez",
+        category: "30 a 45 años Masculino",
+        time: "00:38:35",
+    },
+    {
+        general_position: 20,
+        category_position: 5,
+        dorsal: "61",
+        name: "Carmen Chavez",
+        category: "46 a 60 años Femenino",
+        time: "00:39:30",
+    },
+    {
+        general_position: 21,
+        category_position: 9,
+        dorsal: "62",
+        name: "Rafael Soto",
+        category: "30 a 45 años Masculino",
+        time: "00:40:25",
+    },
+];
 ---
 
 <section>
@@ -70,7 +250,7 @@ import { Icon } from "astro-icon/components";
     </div>
     <div class="site-container my-7">
         <div class="overflow-x-auto">
-            <table class="min-w-ful bg-none" id="table-5k">
+            <table class="min-w-ful bg-none w-full" id="table-5k">
                 <thead>
                     <tr class="bg-base-800 text-white">
                         <th
@@ -96,135 +276,31 @@ import { Icon } from "astro-icon/components";
                     </tr>
                 </thead>
                 <tbody class="divide-y divide-gray-200">
-                    <tr class="hover:bg-primary-700 transition-colors">
-                        <td class="px-2 py-2 text-md"
-                            ><span>Posición General: </span>1</td
-                        >
-                        <td class="px-2 py-2 text-md"
-                            ><span>Posición Categoría: </span>1</td
-                        >
-                        <td class="px-2 py-2 text-md"
-                            ><span>Dorsal: #</span> 42</td
-                        >
-                        <td class="px-2 py-2 text-md font-medium"
-                            >Jesus David Hernandez Argota</td
-                        >
-                        <td class="px-2 py-2 text-md"
-                            ><span>Categoría: </span> 30 a 45 años Masculino</td
-                        >
-                        <td class="px-2 py-2 text-md">00:20:11</td>
-                    </tr>
-                    <tr
-                        class="hover:bg-primary-700 transition-colors dark:bg-primary-800"
-                    >
-                        <td class="px-2 py-2 text-md">2</td>
-                        <td class="px-2 py-2 text-md">2</td>
-                        <td class="px-2 py-2 text-md">96</td>
-                        <td class="px-2 py-2 text-md font-medium"
-                            >Yohn Pino Granadillo</td
-                        >
-                        <td class="px-2 py-2 text-md">30 a 45 años Masculino</td
-                        >
-                        <td class="px-2 py-2 text-md">00:20:56</td>
-                    </tr>
-                    <tr class="hover:bg-primary-700 transition-colors">
-                        <td class="px-2 py-2 text-md">3</td>
-                        <td class="px-2 py-2 text-md">3</td>
-                        <td class="px-2 py-2 text-md">52</td>
-                        <td class="px-2 py-2 text-md font-medium"
-                            >Juan Carlos Granados Cabas</td
-                        >
-                        <td class="px-2 py-2 text-md">30 a 45 años Masculino</td
-                        >
-                        <td class="px-2 py-2 text-md">00:22:10</td>
-                    </tr>
-                    <tr
-                        class="hover:bg-primary-700 transition-colors dark:bg-primary-800"
-                    >
-                        <td class="px-2 py-2 text-md">4</td>
-                        <td class="px-2 py-2 text-md">4</td>
-                        <td class="px-2 py-2 text-md">54</td>
-                        <td class="px-2 py-2 text-md font-medium"
-                            >Juan José Dávila Mejía</td
-                        >
-                        <td class="px-2 py-2 text-md">30 a 45 años Masculino</td
-                        >
-                        <td class="px-2 py-2 text-md">00:24:03</td>
-                    </tr>
-                    <tr class="hover:bg-primary-700 transition-colors">
-                        <td class="px-2 py-2 text-md">5</td>
-                        <td class="px-2 py-2 text-md">1</td>
-                        <td class="px-2 py-2 text-md">91</td>
-                        <td class="px-2 py-2 text-md font-medium"
-                            >Samuel Restrepo Arrieta</td
-                        >
-                        <td class="px-2 py-2 text-md"
-                            >Hasta 29 años Masculino</td
-                        >
-                        <td class="px-2 py-2 text-md">00:24:34</td>
-                    </tr>
-                    <tr
-                        class="hover:bg-primary-700 transition-colors dark:bg-primary-800"
-                    >
-                        <td class="px-2 py-2 text-md">6</td>
-                        <td class="px-2 py-2 text-md">5</td>
-                        <td class="px-2 py-2 text-md">87</td>
-                        <td class="px-2 py-2 text-md font-medium"
-                            >Ronald Restrepo Brekeman</td
-                        >
-                        <td class="px-2 py-2 text-md">30 a 45 años Masculino</td
-                        >
-                        <td class="px-2 py-2 text-md">00:25:14</td>
-                    </tr>
-                    <tr class="hover:bg-primary-700 transition-colors">
-                        <td class="px-2 py-2 text-md">7</td>
-                        <td class="px-2 py-2 text-md">6</td>
-                        <td class="px-2 py-2 text-md">66</td>
-                        <td class="px-2 py-2 text-md font-medium"
-                            >Manuel Lizarazo</td
-                        >
-                        <td class="px-2 py-2 text-md">30 a 45 años Masculino</td
-                        >
-                        <td class="px-2 py-2 text-md">00:25:20</td>
-                    </tr>
-                    <tr
-                        class="hover:bg-primary-700 transition-colors dark:bg-primary-800"
-                    >
-                        <td class="px-2 py-2 text-md">8</td>
-                        <td class="px-2 py-2 text-md">2</td>
-                        <td class="px-2 py-2 text-md">67</td>
-                        <td class="px-2 py-2 text-md font-medium"
-                            >Manuel De Jesús Escobar Contreras</td
-                        >
-                        <td class="px-2 py-2 text-md"
-                            >Hasta 29 años Masculino</td
-                        >
-                        <td class="px-2 py-2 text-md">00:27:48</td>
-                    </tr>
-                    <tr class="hover:bg-primary-700 transition-colors">
-                        <td class="px-2 py-2 text-md">9</td>
-                        <td class="px-2 py-2 text-md">7</td>
-                        <td class="px-2 py-2 text-md">28</td>
-                        <td class="px-2 py-2 text-md font-medium"
-                            >Efraín José Lozano Medina</td
-                        >
-                        <td class="px-2 py-2 text-md">30 a 45 años Masculino</td
-                        >
-                        <td class="px-2 py-2 text-md">00:27:49</td>
-                    </tr>
-                    <tr
-                        class="hover:bg-primary-700 transition-colors dark:bg-primary-800"
-                    >
-                        <td class="px-2 py-2 text-md">10</td>
-                        <td class="px-2 py-2 text-md">1</td>
-                        <td class="px-2 py-2 text-md">10</td>
-                        <td class="px-2 py-2 text-md font-medium"
-                            >Antonia Estrada Salazar</td
-                        >
-                        <td class="px-2 py-2 text-md">Hasta 29 años Femenino</td
-                        >
-                        <td class="px-2 py-2 text-md">00:28:21</td>
-                    </tr>
+                    {
+                        categoryResults.map((result) => (
+                            <tr class="dark:hover:bg-primary-900 hover:bg-base-300 transition-colors">
+                                <td class="px-2 py-2 text-md">
+                                    <span>Posición General: </span>
+                                    {result.general_position}
+                                </td>
+                                <td class="px-2 py-2 text-md">
+                                    <span>Posición Categoría: </span>
+                                    {result.category_position}
+                                </td>
+                                <td class="px-2 py-2 text-md">
+                                    <span>Dorsal: </span>#{result.dorsal}
+                                </td>
+                                <td class="px-2 py-2 text-md font-medium">
+                                    {result.name}
+                                </td>
+                                <td class="px-2 py-2 text-md">
+                                    <span>Categoría: </span>
+                                    {result.category}
+                                </td>
+                                <td class="px-2 py-2 text-md">{result.time}</td>
+                            </tr>
+                        ))
+                    }
                 </tbody>
             </table>
         </div>
@@ -233,7 +309,19 @@ import { Icon } from "astro-icon/components";
 <script>
     import DataTable from "datatables.net-dt";
 
-    // let table = new DataTable("#table-5k", {});
+    let table = new DataTable("#table-5k", {
+        info: false,
+        order: [[0, "asc"]],
+        columnDefs: [{ type: "num", targets: 0 }],
+        language: {
+            search: "Buscar:",
+            entries: {
+                _: "Correodores por página",
+                1: "person",
+            },
+            zeroRecords: "No se encontraron resultados",
+        },
+    });
 </script>
 
 <style>
@@ -256,6 +344,9 @@ import { Icon } from "astro-icon/components";
         transform: scale(1.1);
         transition: right 0.3s ease-in-out;
     }
+    table span {
+        display: none;
+    }
     @media (max-width: 640px) {
         table {
             border-radius: 8px;
@@ -277,16 +368,17 @@ import { Icon } from "astro-icon/components";
         table tr {
             display: flex;
             flex-wrap: wrap;
-            padding: 12px;
-            margin-bottom: 12px;
-            border: 1px solid #e9ecef;
+            padding: 8px;
+            margin-bottom: 8px;
             border-radius: 6px;
+
+            @apply border border-base-300 dark:border-base-600/60;
         }
 
         table tr td {
-            padding: 8px 5px;
+            padding: 4px 3px;
             position: relative;
-            font-size: 0.95rem;
+            font-size: 0.85rem;
         }
 
         table tr td:nth-child(1) {
@@ -307,10 +399,10 @@ import { Icon } from "astro-icon/components";
         table tr td:nth-child(4) {
             order: 0;
             width: 100%;
-            font-size: 1.1rem;
+            font-size: 1rem;
             font-weight: 600;
-            border-bottom: 2px solid #e2e8f0;
-            @apply bg-gradient-to-r from-base-900 to-base-600/90 bg-clip-text pb-4 text-lg font-medium text-transparent md:text-6xl dark:from-base-300 dark:to-base-400/90;
+
+            @apply border-base-300 dark:border-base-600/60 border-b-2 bg-gradient-to-r from-base-900 to-base-600/90 bg-clip-text pb-2 text-lg font-medium text-transparent md:text-6xl dark:from-base-300 dark:to-base-400/90;
         }
 
         table tr td:nth-child(5) {
@@ -322,15 +414,15 @@ import { Icon } from "astro-icon/components";
             width: 100%;
             order: 5;
             color: white;
-            padding: 12px 16px;
+            padding: 8px 12px;
             border-radius: 6px;
             font-family: monospace;
-            font-size: 1.2rem;
+            font-size: 1rem;
             text-align: center;
             box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.5);
             text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
             letter-spacing: 2px;
-            @appy bg-gradient-to-r from-base-900 to-base-600/90;
+            @apply bg-gradient-to-r from-base-900 to-base-600/90;
         }
 
         table td {
@@ -338,14 +430,14 @@ import { Icon } from "astro-icon/components";
         }
         table td span {
             font-weight: bold;
-            margin-bottom: 4px;
+            margin-bottom: 2px;
             display: block;
         }
         table td::before {
             content: attr(data-label);
             font-weight: 600;
             color: #4a5568;
-            margin-bottom: 4px;
+            margin-bottom: 2px;
             display: block;
         }
     }

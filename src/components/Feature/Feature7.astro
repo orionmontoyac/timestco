@@ -39,7 +39,7 @@ const featureData: FeatureData[] = [
     image: race3,
     title: "Los Andes Trail 2024",
     text: `Andes Noviembre 7`,
-    link: "/los-andes-trail-2024" // Add link
+    link: "/results/los-andes-trail" // Add link
   }
 ];
 ---
@@ -49,7 +49,7 @@ const featureData: FeatureData[] = [
     <div class="grid gap-4 sm:grid-cols-2 md:grid-cols-4">
       {
         featureData.map((feature) => (
-          <a href="/"> <!-- Wrap FeatureCard with anchor tag -->
+          <a href={feature.link}>
             <FeatureCard
               title={feature.title}
               text={feature.text}
