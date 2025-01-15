@@ -7,8 +7,8 @@ import NavDropdownToggle from "@components/Nav/NavDropdown/NavDropdownToggle.ast
 import MegaMenuDropdownToggle from "./NavDropdown/MegaMenuDropdownToggle.astro";
 import MobileNav from "@components/Nav/MobileNav/MobileNav.astro";
 import SiteLogo from "@components/SiteLogo.astro";
-import Button from "@components/Button.astro";
 import ThemeToggle from "@components/ThemeToggle.astro";
+import { Icon } from "astro-icon/components";
 
 // utils
 import { getLocaleFromUrl } from "@js/localeUtils";
@@ -58,6 +58,18 @@ const navData = getTranslatedData("navData", currLocale);
               </ul>
             </nav>
             <div class="hidden items-center gap-1 md:flex">
+                <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
+                <Icon
+                  name="tabler/instagram-logo"
+                  class="h-6 w-6 text-base-400 dark:text-base-200"
+                />
+                </a>
+                <a href="https://www.whatsapp.com" target="_blank" rel="noopener noreferrer">
+                <Icon
+                  name="tabler/whatsapp-logo"
+                  class="h-6 w-6 text-base-400 dark:text-base-200"
+                />
+                </a>
               <ThemeToggle />
             </div>
 
