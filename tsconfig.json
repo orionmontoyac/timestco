@@ -32,7 +32,9 @@
       ],
       "@content/*": [
         "src/content/*"
-      ],
-    }
+      ]
+    },
+    "jsx": "react-jsx",
+    "jsxImportSource": "react"
   }
 }

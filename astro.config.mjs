@@ -5,9 +5,11 @@ import tailwind from '@astrojs/tailwind';
 
 import icon from "astro-icon";
 
+import react from "@astrojs/react";
+
 // https://astro.build/config
 export default defineConfig({
-  integrations: [tailwind(), icon()],
+  integrations: [tailwind(), icon(), react()],
   // i18n configuration must match src/config/translations.json.ts
   i18n: {
     defaultLocale: "es",
