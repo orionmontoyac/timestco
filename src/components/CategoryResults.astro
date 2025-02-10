@@ -89,7 +89,7 @@ import categoryResults from "@data/races/los_andes_trail/results.json";
                                     </td>
                                     <td class="px-2 py-2 text-md font-medium">
                                         <div class="flex">
-                                            <p>{result.name}</p>
+                                            <p class="runner-name text-white" style="color: aliceblue;">{result.name}</p>
                                             {result.general_position === 1 && (
                                                 <Icon
                                                     name="tabler/medal"
@@ -240,7 +240,9 @@ import categoryResults from "@data/races/los_andes_trail/results.json";
             position: relative;
             font-size: 0.85rem;
         }
-
+        p.runner-name {
+            color: white !important;
+        }
         table tr td:nth-child(1) {
             width: 50%;
             order: 1;
