@@ -64,6 +64,24 @@ const {
 <meta name="generator" content={Astro.generator} />
 <link rel="sitemap" href="/sitemap-index.xml" />
 
+<!-- Primary Meta Tags -->
+<title>{title} | Timest Colombia</title>
+<meta name="title" content={title} />
+<meta name="description" content="Servicios de cronometraje electrónico líder en Colombia para eventos deportivos. Tecnología avanzada y resultados precisos para competencias nacionales e internacionales." />
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://timestcolombia.com/" />
+<meta property="og:title" content={title} />
+<meta property="og:description" content="Líder en cronometraje electrónico para eventos deportivos en Colombia. Precisión y confiabilidad garantizada en cada competencia." />
+<meta property="og:image" content="/images/timest-social.jpg" />
+
+<!-- Twitter -->
+<meta property="twitter:card" content="summary_large_image" />
+<meta property="twitter:url" content="https://timestcolombia.com/" />
+<meta property="twitter:title" content={title} />
+<meta property="twitter:description" content="Tecnología avanzada de cronometraje para eventos deportivos en Colombia. Resultados precisos y confiables." />
+<meta property="twitter:image" content="/images/timest-social.jpg" />
 <!-- Theme change setup. Run early to eliminate Flash of inAccurate coloR Theme (FART) -->
 <script is:inline>
   function initTheme() {
