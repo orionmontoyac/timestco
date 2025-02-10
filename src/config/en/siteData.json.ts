@@ -5,9 +5,9 @@ const siteData: SiteDataProps = {
   name: "Timestco",
   // Your website's title and description (meta fields)
   title:
-    "Galaxy - a slick startup / SaaS theme built using Astro and Tailwind CSS",
+    "Timest Colombia cronometraje eventos deportivos.",
   description:
-    "Get your new startup website up and running quickly with our beautiful website theme designed using Astro and Tailwind CSS. Perfect for freelancers, developers, startups, and personal use.",
+    "Líder en cronometraje electrónico para eventos deportivos en Colombia. Precisión y confiabilidad garantizada en cada competencia.",
 
   // Your information for blog post purposes
   author: {
