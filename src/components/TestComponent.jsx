@@ -94,7 +94,7 @@ const CategoryResults = () => {
                             </thead>
                             <tbody className="divide-y divide-gray-200">
                                 {distance.results.map((result) => (
-                                    <tr key={result.dorsal} className="dark:hover:bg-primary-800 hover:bg-base-300 transition-colors border-teal-500">
+                                    <tr key={result.dorsal} className="dark:bg-primary-900 hover:bg-base-300 transition-colors border border-blue-500">
                                         <td className="px-2 py-2 text-md">
                                             <span>Posición General: </span>
                                             {result.general_position}
@@ -106,7 +106,7 @@ const CategoryResults = () => {
                                         <td className="px-2 py-2 text-md">
                                             <span>Dorsal: </span>#{result.dorsal}
                                         </td>
-                                        <td className="px-2 py-2 text-md font-medium">
+                                        <td className="px-2 py-2 text-md font-medium text-center">
                                             <div className="flex">
                                                 <p className="text-white">{result.name}</p>
                                                 {result.general_position === 1 && (
